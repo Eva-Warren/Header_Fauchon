@@ -1,0 +1,129 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fauchon Header</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="teste">
+                <div class="une">
+                    <a href="#">La Maison FAUCHON</a>
+                    <a href="#">Cadeaux d'Entreprise</a>
+                </div>
+                <div class="deux" id="text">Texte 1 - Vers le haut</div>
+                <div class="trois">
+                    <div class="language">
+                        <span>Fr</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-content">
+                            <a href="#">Fr</a>
+                            <a href="#">En</a>
+                        </div>
+                    </div>
+                    <a href="#">Nos boutiques</a>
+                    <a href="#">Nous contacter</a>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="ray">
+                    <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+                    <a href="">Collection de Noël</a>
+                </div>
+                <div class="roa">
+                    <img src="https://www.fauchon.com/cdn/shop/files/LOGO_FAUCHON.svg?v=1721204277&width=135" alt="Logo" width="200">
+                </div>
+                <div class="telo">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href=""><i class="fa-regular fa-bell"></i></a>
+                    <a href=""><i class="fa-regular fa-user"></i></a>
+                    <button id="open-cart-button" onclick="toggleCart()"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+            </div>
+            <nav class="menu" id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <ul>
+                      <li onclick="toggleCollapse(this)">
+                          La boutique <i class="fas fa-plus"></i>
+                      </li>
+                      <ul class="submenu">
+                          <li>Chocolats</li>
+                          <li>Confiseries</li>
+                          <li>Pâtisseries</li>
+                      </ul>
+                    </ul>
+                    <ul>
+                      <li onclick="toggleCollapse(this)">
+                          Cadeaux et Coffrets <i class="fas fa-plus"></i>
+                      </li>
+                      <ul class="submenu">
+                        <li>Coffrets de Noël</li>
+                        <li>Éditions limitées</li>
+                      </ul>
+                    </ul>
+                    <ul>
+                      <li onclick="toggleCollapse(this)">
+                          Occasions d'offrir <i class="fas fa-plus"></i>
+                      </li>
+                      <ul class="submenu">
+                        <li>Anniversaires</li>
+                        <li>Fêtes</li>
+                        <li>Réceptions</li>
+                      </ul>
+                    </ul>
+                    <li>
+                        Le Mag
+                    </li>
+                    <ul>
+                      <li onclick="toggleCollapse(this)">
+                          <em>La Maison</em> <i class="fas fa-plus"></i>
+                      </li>
+                      <ul class="submenu">
+                          <li>Notre histoire</li>
+                          <li>Valeurs</li>
+                          <li>Engagements</li>
+                      </ul>
+                    </ul>
+                </ul>
+                <hr width="488" style="margin-left: -6%; margin-top: 80px;">
+                <div class="sub">
+                    <h3>Les origines de la tradition du chocolat à Noël</h3>
+                    <p>Pour des fêtes inoubliables, découvrez notre sélection de chocolats à offrir ou à déguster.</p>
+                </div>
+                <hr width="488" style="margin-left: -6%;">
+                <div class="sub">
+                    <h3>Velouté de potimarron, châtaignes et œuf mollet</h3>
+                    <p>Un plat parfait pour une entrée élégante, pleine de saveurs douces et généreuses.</p>
+                </div>
+                <div class="imd">
+                    <div class="car">
+                        <div class="dhd">
+                            <p>Nos instants de partage</p>
+                            <button>Découvrir</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-menu" onclick="toggleMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </nav>
+
+            <div class="cart" id="cart">
+                <h2>Votre panier est vide</h2>
+                <button class="add-to-cart">Continuer les achats</button>
+                <p>Vous possédez un compte ?</p>
+                <a href="">Connectez-vous</a>
+                <button class="close-cart" onclick="toggleCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </header>
+    </body>
+    <script src="./script.js"></script>
+    
+    </html>
