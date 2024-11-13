@@ -150,7 +150,7 @@ header {
     transition: opacity 0.5s, transform 0.5s;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 600px) {
     .une, .trois {
         display: none; /* Masquer les sections `.une` et `.trois` */
     }
