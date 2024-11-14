@@ -1,3 +1,52 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById("text");
+    const texts = [
+        { content: "LIVRAISON COLISSIMO OFFERTE en France dès 80€ d'achat", direction: "down" },
+        { content: "Expédition Jour J : commandez avant 12h !", direction: "down" },
+        { content: "Evènement spécial ? Laissez nous vous guider", direction: "down" }
+    ];
+
+    let index = 0;
+
+    function showText() {
+        textElement.style.transform = "translateY(20px)";
+        textElement.style.opacity = 0;
+
+        setTimeout(() => {
+            textElement.textContent = texts[index].content;
+            textElement.style.opacity = 1;
+            textElement.style.transform = "translateY(0px)";
+            index = (index + 1) % texts.length;
+        }, 500);
+    }
+
+    setInterval(showText, 5000);
+    showText();
+    document.getElementById("toggle-menu").addEventListener("click", toggleMenu);
+    document.getElementById("open-cart-button").addEventListener("click", toggleCart);
+    document.getElementById("close-menu").addEventListener("click", toggleMenu);
+    document.getElementById("close-cart").addEventListener("click", toggleCart);
+
+    document.querySelectorAll(".collapsible").forEach((item) => {
+        item.addEventListener("click", function() {
+            toggleCollapse(item);
+        });
+    });
+
+    const languageElement = document.querySelector('.language');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    languageElement.addEventListener('click', function() {
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!languageElement.contains(event.target)) {
+            dropdownContent.style.display = "none";
+        }
+    });
+});
+
 function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
@@ -26,58 +75,3 @@ function toggleCollapse(element) {
         icon.classList.replace("fa-plus", "fa-minus");
     }
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById("text");
-    const texts = [
-        { content: "LIVRAISON COLISSIMO OFFERTE en France dès 80€ d'achat", direction: "down" },
-        { content: "Expédition Jour J : commandez avant 12h !", direction: "down" },
-        { content: "Evènement spécial ? Laissez nous vous guider", direction: "down" }
-    ];
-
-    let index = 0;
-
-    function showText() {
-        // Réinitialiser l'animation
-        textElement.style.transform = "translateY(20px)"; // Remettre le texte en bas
-        textElement.style.opacity = 0; // Rendre le texte transparent
-
-        setTimeout(() => {
-            // Mettre à jour le contenu et l'animation
-            textElement.textContent = texts[index].content;
-            
-            // Rendre visible le texte et faire descendre
-            textElement.style.opacity = 1;
-            textElement.style.transform = "translateY(0px)"; // Faire descendre vers le haut
-
-            // Passer au texte suivant
-            index = (index + 1) % texts.length;
-        }, 500); // Attendre que l'animation précédente se termine
-    }
-
-    setInterval(showText, 5000); // Appeler toutes les 5 secondes
-
-    // Afficher le premier texte immédiatement
-    showText();
-
-    // Gérer l'affichage du dropdown au clic
-    const languageElement = document.querySelector('.language');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    languageElement.addEventListener('click', function() {
-        // Alterner l'affichage du dropdown
-        if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-        } else {
-            dropdownContent.style.display = "block";
-        }
-    });
-
-    // Fermer le dropdown si l'utilisateur clique ailleurs sur la page
-    document.addEventListener('click', function(event) {
-        if (!languageElement.contains(event.target)) {
-            dropdownContent.style.display = "none";
-        }
-    });
-
-});

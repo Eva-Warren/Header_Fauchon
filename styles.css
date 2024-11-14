@@ -1,19 +1,17 @@
 @font-face {
     font-family: "SangBleu Sunrise";
     src: url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.eot");
-    src: url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.svg#SangBleu Sunrise")format("svg");
+    src: url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.eot?#iefix")format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.woff")format("woff"), url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.ttf")format("truetype"), url("https://db.onlinewebfonts.com/t/5ebc09361aef4dbfa14ad8492b8cca11.svg#SangBleu Sunrise")format("svg");
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: "SangBleu Sunrise";
     width: 100%;
     height: 100%;
@@ -23,9 +21,7 @@ body {
     margin: 0;
 }
 
-header {
-    
-}
+header {}
 
 .teste {
     font-size: 14px;
@@ -38,7 +34,7 @@ header {
     background-color: rgb(225, 0, 128);
 }
 
-.main-header{
+.main-header {
     font-size: 14px;
     width: 100%;
     display: flex;
@@ -46,13 +42,17 @@ header {
     padding-top: 1%;
 }
 
-.une, .deux, .trois {
+.une,
+.deux,
+.trois {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.ray , .roa, .telo{
+.ray,
+.roa,
+.telo {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -74,13 +74,17 @@ header {
     margin-right: 11%;
 }
 
-.une a, .deux a, .trois a {
+.une a,
+.deux a,
+.trois a {
     text-decoration: none;
     color: white;
     font-size: 14px;
 }
 
-.ray a, .roa a, .telo a {
+.ray a,
+.roa a,
+.telo a {
     text-decoration: none;
     font-size: 1.125rem;
     color: #3f3f3f;
@@ -95,7 +99,7 @@ header {
 }
 
 .dropdown-content {
-    display: none; /* Caché par défaut */
+    display: none;
     position: absolute;
     background-color: #fff;
     cursor: pointer;
@@ -134,8 +138,9 @@ header {
     font-size: 0.9em;
     color: #333;
 }
+
 .submenu {
-    display: none; /* Caché par défaut */
+    display: none;
     padding-left: 20px;
     font-size: 15px;
     font-style: italic;
@@ -145,25 +150,29 @@ header {
 
 #text {
     color: white;
-    transform: translateY(20px); /* Commence en bas */
-    opacity: 0; 
+    transform: translateY(20px);
+    opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
 }
 
 @media (max-width: 600px) {
-    .une, .trois {
-        display: none; /* Masquer les sections `.une` et `.trois` */
+
+    .une,
+    .trois {
+        display: none;
     }
 
     .deux {
-        flex: 1; /* Prendre toute la largeur disponible */
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center; /* Centrer le texte */
+        text-align: center;
     }
 }
+
 .menu {
+    z-index: 11111;
     display: none;
     position: fixed;
     top: 0;
@@ -171,7 +180,7 @@ header {
     width: 30%;
     height: 100%;
     background-color: #f9f8f5;
-    box-shadow: 2px 0px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
 
@@ -198,24 +207,27 @@ header {
     cursor: pointer;
 }
 
-.sub{
+.sub {
     padding: 15px 5px 15px 5px;
 }
 
-.hamburger{
+.hamburger {
     background-color: white;
     font-size: 20px;
     border: none;
 }
-.sub h3{
+
+.sub h3 {
     font-size: 18px;
 }
-.sub p{
+
+.sub p {
     font-size: 15px;
-    font-weight:normal;
+    font-weight: normal;
 }
+
 .imd {
-    background-image: url("https://www.fauchon.com/cdn/shop/files/instant_partage.png?v=1727252236&width=1300");
+    background-image: url("https://www.fauchon.com/cdn/shop/files/instant_partage.png?v=1727252236&amp;width=1300");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -224,7 +236,8 @@ header {
     position: fixed;
     height: 26vh;
 }
-.dhd{
+
+.dhd {
     background-color: white;
     width: 400px;
     margin-left: 40px;
@@ -235,10 +248,11 @@ header {
     justify-content: space-between;
 }
 
-.dhd p{
+.dhd p {
     padding: 30px 0px 0px 15px;
 }
-.dhd button{
+
+.dhd button {
     margin-right: 20px;
     margin-top: 20px;
     width: 100px;
@@ -248,6 +262,7 @@ header {
     border: none;
     border-radius: 4px;
 }
+
 .cart {
     display: none;
     position: fixed;
@@ -264,12 +279,11 @@ header {
     z-index: 1000;
 }
 
-#open-cart-button{
+#open-cart-button {
     background-color: white;
     border: none;
     font-size: 20px;
 }
-
 
 .cart.open {
     display: block;
@@ -284,11 +298,12 @@ header {
     margin: 20px 0;
 }
 
-.cart a{
+.cart a {
     color: #000;
     text-decoration: underline;
     text-underline-offset: 5px;
 }
+
 .add-to-cart {
     margin-top: 30px;
     background-color: #f40687;
@@ -311,4 +326,8 @@ header {
     border: none;
     font-size: 18px;
     cursor: pointer;
+}
+
+.roa img {
+    width: 200px;
 }

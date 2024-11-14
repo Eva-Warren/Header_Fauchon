@@ -19,7 +19,6 @@
                     <div class="language">
                         <span>Fr</span>
                         <i class="fas fa-chevron-down"></i>
-                        <!-- Dropdown menu -->
                         <div class="dropdown-content">
                             <a href="#">Fr</a>
                             <a href="#">En</a>
@@ -31,7 +30,7 @@
             </div>
             <div class="main-header">
                 <div class="ray">
-                    <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+                    <button class="hamburger" id="toggle-menu"><i class="fa-solid fa-bars"></i></button>
                     <a href="">Collection de Noël</a>
                 </div>
                 <div class="roa">
@@ -41,14 +40,14 @@
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href=""><i class="fa-regular fa-bell"></i></a>
                     <a href=""><i class="fa-regular fa-user"></i></a>
-                    <button id="open-cart-button" onclick="toggleCart()"><i class="fa-solid fa-bag-shopping"></i></button>
+                    <button id="open-cart-button" id="open-cart-button"><i class="fa-solid fa-bag-shopping"></i></button>
                 </div>
             </div>
             <nav class="menu" id="menu">
                 <h2>Menu</h2>
                 <ul>
                     <ul>
-                      <li onclick="toggleCollapse(this)">
+                      <li class="collapsible">
                           La boutique <i class="fas fa-plus"></i>
                       </li>
                       <ul class="submenu">
@@ -58,7 +57,7 @@
                       </ul>
                     </ul>
                     <ul>
-                      <li onclick="toggleCollapse(this)">
+                      <li class="collapsible">
                           Cadeaux et Coffrets <i class="fas fa-plus"></i>
                       </li>
                       <ul class="submenu">
@@ -67,7 +66,7 @@
                       </ul>
                     </ul>
                     <ul>
-                      <li onclick="toggleCollapse(this)">
+                      <li class="collapsible">
                           Occasions d'offrir <i class="fas fa-plus"></i>
                       </li>
                       <ul class="submenu">
@@ -80,7 +79,7 @@
                         Le Mag
                     </li>
                     <ul>
-                      <li onclick="toggleCollapse(this)">
+                      <li class="collapsible">
                           <em>La Maison</em> <i class="fas fa-plus"></i>
                       </li>
                       <ul class="submenu">
@@ -108,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="close-menu" onclick="toggleMenu()">
+                <button class="close-menu" id="close-menu">
                     <i class="fas fa-times"></i>
                 </button>
             </nav>
@@ -118,7 +117,7 @@
                 <button class="add-to-cart">Continuer les achats</button>
                 <p>Vous possédez un compte ?</p>
                 <a href="">Connectez-vous</a>
-                <button class="close-cart" onclick="toggleCart()">
+                <button class="close-cart" id="close-cart">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
